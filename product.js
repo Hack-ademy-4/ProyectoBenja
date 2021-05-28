@@ -1,6 +1,7 @@
 // el producto. Esqueleto:
 /*
 product {
+	id,
 	categoria,
 	titulo,
 	descripcion,
@@ -52,14 +53,19 @@ export class Product extends LitElement {
 			display: block;
 		}
 	`;
+
 	constructor() {
 		super();
 		this.last = 10;
 		this.categoria = null;
 	}
 
+	createRenderRoot() {
+    return this;
+  }
+
 	render() {
 		return html``;
 	}
 }
-customElements.define('product', Product);
+customElements.define('productos-show', Product);
